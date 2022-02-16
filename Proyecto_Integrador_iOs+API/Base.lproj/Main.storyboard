@@ -30,23 +30,26 @@
             </objects>
             <point key="canvasLocation" x="-458" y="-123"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Planets-->
         <scene sceneID="jfl-40-lKG">
             <objects>
-                <tableViewController id="k0L-8X-cxi" sceneMemberID="viewController">
+                <tableViewController id="k0L-8X-cxi" customClass="TableViewController_PlanetList" customModule="Proyecto_Integrador_iOs_API" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Wxh-Jl-1Dh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LeB-ax-cEs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LeB-ax-cEs">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LeB-ax-cEs" id="3Jg-tn-xTT">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LeB-ax-cEs" id="3Jg-tn-xTT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="npK-Y0-t0Q" kind="show" identifier="irDetalle" id="hg9-Vx-vjQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,7 +57,10 @@
                             <outlet property="delegate" destination="k0L-8X-cxi" id="vtO-cw-aW9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="2zV-MS-xma"/>
+                    <navigationItem key="navigationItem" title="Planets" id="2zV-MS-xma"/>
+                    <connections>
+                        <outlet property="miTabla" destination="Wxh-Jl-1Dh" id="s98-mY-c03"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4U-7C-TUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +130,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="npK-Y0-t0Q" kind="show" id="6TB-ao-CyA"/>
+                                    <action selector="btnAdd:" destination="wuU-it-1ch" eventType="touchUpInside" id="Hwm-yW-x9y"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TrX-nv-hS7">
@@ -165,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="1083" y="-123"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller detail Planet-->
         <scene sceneID="9tS-ac-bSg">
             <objects>
-                <viewController id="npK-Y0-t0Q" sceneMemberID="viewController">
+                <viewController id="npK-Y0-t0Q" customClass="ViewController_detailPlanet" customModule="Proyecto_Integrador_iOs_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SY5-iY-aXO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,10 +278,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jKl-NT-z0k"/>
+                    <connections>
+                        <outlet property="planetName" destination="jTH-dn-qSJ" id="xS1-Gx-6Hu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phu-VL-WDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.6231884057972" y="-123.21428571428571"/>
+            <point key="canvasLocation" x="1083" y="569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BWH-Qa-tWC">

@@ -8,13 +8,50 @@
 import UIKit
 
 class ViewControllerAddPlanet: UIViewController {
-
+    
+    var decodePlanet : [Planetas] = []
+    
+    @IBAction func btnAdd(_ sender: Any) {
+        executeAPI()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         // Do any additional setup after loading the view.
     }
     
+    func executeAPI(){
+        let urlSession = URLSession.shared
+        let url = URL(string: "https://iplanet-api.herokuapp.com/getallplanets")
+        
+        urlSession.dataTask(with: url!) {
+            data, response, error in
+           /* print("Data \(String(describing: data))")
+            print("Response \(String(describing: response))")*/
+            
+            if let data = data {
+                let json = try? JSONSerialization.jsonObject(with: data)
+                print(String(describing: json)
+            )}
+            print("Error \(String(describing: error))")
+        }.resume()
+        
+        /*func decodeJson(url : URL){
+            do{
+                let decoder = JSONDecoder()
+                let datosPlanetas = try Data(contentsOf: url)
+                
+                self.decodePlanet = try decoder.decode([Planetas].self, from: datosPlanetas)
+            } catch {
+                print("Error")
+            }
+        }*/
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation
