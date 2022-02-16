@@ -279,7 +279,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="jKl-NT-z0k"/>
                     <connections>
+                        <outlet property="planetCathegory" destination="Ajc-1J-bad" id="s7b-8g-uQd"/>
+                        <outlet property="planetDensity" destination="LHN-rZ-wBn" id="iqS-hC-J2i"/>
+                        <outlet property="planetDistance" destination="Jta-iv-cjh" id="93T-98-BJx"/>
+                        <outlet property="planetEquatorialRadius" destination="VRF-VR-kQy" id="Gne-7n-axf"/>
+                        <outlet property="planetImg" destination="L8z-ph-Wlz" id="PI1-0v-Wxq"/>
+                        <outlet property="planetMass" destination="LAI-wI-82X" id="4Qh-rA-Gf8"/>
                         <outlet property="planetName" destination="jTH-dn-qSJ" id="xS1-Gx-6Hu"/>
+                        <outlet property="planetRotationPeriod" destination="Tl2-hD-WhU" id="95o-x8-F66"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phu-VL-WDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
