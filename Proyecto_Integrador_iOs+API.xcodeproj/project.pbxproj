@@ -18,7 +18,7 @@
 		CBB7174E27B6933E00A8DC4B /* ViewControllerAddPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7174D27B6933E00A8DC4B /* ViewControllerAddPlanet.swift */; };
 		CBCC961427BD73D800030753 /* CollectionViewControllerListPlanets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC961327BD73D800030753 /* CollectionViewControllerListPlanets.swift */; };
 		CBCC961627BD759B00030753 /* CollectionViewCellPlanets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC961527BD759B00030753 /* CollectionViewCellPlanets.swift */; };
-		CD82297727BD252F009ED8A9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82297627BD252F009ED8A9 /* ViewModel.swift */; };
+		CBFEE32727BE760500CC5D4B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFEE32627BE760500CC5D4B /* ViewModel.swift */; };
 		CD82297927BD2A60009ED8A9 /* Planetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82297827BD2A60009ED8A9 /* Planetas.swift */; };
 		CD82297B27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82297A27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift */; };
 		CD82297D27BD33C8009ED8A9 /* ViewController_detailPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82297C27BD33C8009ED8A9 /* ViewController_detailPlanet.swift */; };
@@ -57,7 +57,7 @@
 		CBB7174D27B6933E00A8DC4B /* ViewControllerAddPlanet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddPlanet.swift; sourceTree = "<group>"; };
 		CBCC961327BD73D800030753 /* CollectionViewControllerListPlanets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerListPlanets.swift; sourceTree = "<group>"; };
 		CBCC961527BD759B00030753 /* CollectionViewCellPlanets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellPlanets.swift; sourceTree = "<group>"; };
-		CD82297627BD252F009ED8A9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CBFEE32627BE760500CC5D4B /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CD82297827BD2A60009ED8A9 /* Planetas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planetas.swift; sourceTree = "<group>"; };
 		CD82297A27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController_PlanetList.swift; sourceTree = "<group>"; };
 		CD82297C27BD33C8009ED8A9 /* ViewController_detailPlanet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_detailPlanet.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				CD82297C27BD33C8009ED8A9 /* ViewController_detailPlanet.swift */,
 				CD82297A27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift */,
 				CBB7174D27B6933E00A8DC4B /* ViewControllerAddPlanet.swift */,
-				CD82297627BD252F009ED8A9 /* ViewModel.swift */,
+				CBFEE32627BE760500CC5D4B /* ViewModel.swift */,
 				CD82297827BD2A60009ED8A9 /* Planetas.swift */,
 				CBB7172127B4628100A8DC4B /* Main.storyboard */,
 				CBCC961527BD759B00030753 /* CollectionViewCellPlanets.swift */,
@@ -276,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFEE32727BE760500CC5D4B /* ViewModel.swift in Sources */,
 				CBB7171C27B4628100A8DC4B /* AppDelegate.swift in Sources */,
 				CBB7171E27B4628100A8DC4B /* SceneDelegate.swift in Sources */,
 				CBCC961427BD73D800030753 /* CollectionViewControllerListPlanets.swift in Sources */,
@@ -283,7 +284,6 @@
 				CBCC961627BD759B00030753 /* CollectionViewCellPlanets.swift in Sources */,
 				CD82297D27BD33C8009ED8A9 /* ViewController_detailPlanet.swift in Sources */,
 				CD82297B27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift in Sources */,
-				CD82297727BD252F009ED8A9 /* ViewModel.swift in Sources */,
 				CBB7174E27B6933E00A8DC4B /* ViewControllerAddPlanet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
