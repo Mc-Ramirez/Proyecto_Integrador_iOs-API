@@ -1,13 +1,12 @@
 //
-//  planeta.swift
+//  PlanetBody.swift
 //  Proyecto_Integrador_iOs+API
 //
-//  Created by Sergio Rivera Anguita on 16/2/22.
+//  Created by Alberto on 19/2/22.
 //
 
 import Foundation
-
-struct Planetas : Codable{
+struct PlanetBody : Codable{
     var id : String
     var planetName : String
     var planetUrlImage : String
@@ -19,6 +18,3 @@ struct Planetas : Codable{
     var category : String
    
 }
-
-
-

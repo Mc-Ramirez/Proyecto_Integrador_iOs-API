@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController_detailPlanet: UIViewController {
+    
     @IBOutlet weak var planetImg: UIImageView!
     @IBOutlet weak var planetName: UILabel!
     @IBOutlet weak var planetCathegory: UILabel!
@@ -20,6 +21,7 @@ class ViewController_detailPlanet: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("la id del planeta \(String(describing: planetContent?.id))")
         //planetImg.image = planetContent?.planetUrlImage
         planetName.text = planetContent?.planetName
         planetCathegory.text = planetContent?.category
