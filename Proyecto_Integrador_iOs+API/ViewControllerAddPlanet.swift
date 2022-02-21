@@ -6,6 +6,17 @@ import UIKit
 
 class ViewControllerAddPlanet: UIViewController {
     
+    @IBOutlet weak var TFName: UITextField!
+    @IBOutlet weak var TFDensity: UITextField!
+    @IBOutlet weak var TFMass: UITextField!
+    @IBOutlet weak var TFDistance: UITextField!
+    @IBOutlet weak var TFRadius: UITextField!
+    @IBOutlet weak var TFRotation: UITextField!
+    @IBOutlet weak var TFCategory: UITextField!
+    @IBOutlet weak var ImagePlanet: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,13 +27,13 @@ class ViewControllerAddPlanet: UIViewController {
         // Preparamos los datos en formato json
         print("clicas aqui")
         let planetJson: [String:String] = [
-            "planetName": "Hola",
-            "planetDistanceMio": "aa",
-            "planetEquatorialRadius": "a",
-            "planetRotationPeriod": "a",
-            "planetMassKg": "a",
-            "planetDensity": "a",
-            "category": "a",
+            "planetName": "\(TFName.text ?? "")",
+            "planetDistanceMio": "\(TFDistance.text ?? "")",
+            "planetEquatorialRadius": "\(TFRadius.text ?? "")",
+            "planetRotationPeriod": "\(TFRotation.text ?? "")",
+            "planetMassKg": "\(TFMass.text ?? "")",
+            "planetDensity": "\(TFDensity.text ?? "")",
+            "category": "\(TFCategory.text ?? "")",
             "planetUrlImage": "a"
             ]
         

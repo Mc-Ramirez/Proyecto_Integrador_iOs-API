@@ -18,6 +18,7 @@ class TableViewController_PlanetList: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         let url =  loadDataFromRemoteUrl()
         decodeJson(url: url)
+        tableView.reloadData()
     }
 
     func loadDataFromRemoteUrl() -> URL{

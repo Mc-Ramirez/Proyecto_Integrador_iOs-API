@@ -140,7 +140,9 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ADD PLANET">
-                                    <backgroundConfiguration key="background"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <attributedString key="attributedSubtitle"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,71 +151,98 @@
                                     <action selector="btnAdd:" destination="wuU-it-1ch" eventType="touchUpInside" id="Hwm-yW-x9y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Density" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-of-M3t">
-                                <rect key="frame" x="50" y="345" width="314" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Density" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-of-M3t">
+                                <rect key="frame" x="50" y="382" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mass" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2HP-pj-vYZ">
-                                <rect key="frame" x="50" y="409" width="314" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mass" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2HP-pj-vYZ">
+                                <rect key="frame" x="50" y="446" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance To Sun" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cx5-pI-HGE">
-                                <rect key="frame" x="50" y="473" width="314" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance To Sun" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cx5-pI-HGE">
+                                <rect key="frame" x="50" y="510" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Equatorial Radius" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-GP-woM">
-                                <rect key="frame" x="50" y="537" width="314" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Equatorial Radius" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-GP-woM">
+                                <rect key="frame" x="50" y="574" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rotation Period" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCA-LT-fq3">
-                                <rect key="frame" x="50" y="601" width="314" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rotation Period" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCA-LT-fq3">
+                                <rect key="frame" x="50" y="638" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TrX-nv-hS7">
-                                <rect key="frame" x="50" y="281" width="314" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TrX-nv-hS7">
+                                <rect key="frame" x="50" y="257" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category:   Planet | Star | Moon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-iI-7TU">
+                                <rect key="frame" x="50" y="321" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CM-DS-lec">
+                                <rect key="frame" x="50" y="65" width="314" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="cjO-kj-vTh"/>
+                                    <constraint firstAttribute="height" constant="155" id="sEw-X0-vqp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0b7-0Z-j5w"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="Esh-GP-woM" secondAttribute="trailing" constant="50" id="00n-Zh-vXZ"/>
+                            <constraint firstItem="0CM-DS-lec" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="1pS-wK-9of"/>
                             <constraint firstItem="lCA-LT-fq3" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="2It-Kq-AZP"/>
                             <constraint firstItem="NvL-of-M3t" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="4ma-9r-hYz"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="bottom" secondItem="lA1-Ww-EgA" secondAttribute="bottom" constant="30" id="5Qe-5h-xhT"/>
                             <constraint firstItem="Cx5-pI-HGE" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="78d-aq-H67"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="TrX-nv-hS7" secondAttribute="trailing" constant="50" id="BPI-TM-y9a"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="NvL-of-M3t" secondAttribute="trailing" constant="50" id="CCb-3m-GtO"/>
+                            <constraint firstItem="0CM-DS-lec" firstAttribute="top" secondItem="TO2-KR-CSN" secondAttribute="top" constant="65" id="FUv-7p-AlW"/>
+                            <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="7aC-iI-7TU" secondAttribute="trailing" constant="50" id="FhL-Di-T5Q"/>
                             <constraint firstItem="2HP-pj-vYZ" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="Lw2-PM-3ol"/>
+                            <constraint firstItem="7aC-iI-7TU" firstAttribute="top" secondItem="TrX-nv-hS7" secondAttribute="bottom" constant="30" id="Ly4-K1-kov"/>
                             <constraint firstItem="lA1-Ww-EgA" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="Oe4-SR-7ax"/>
                             <constraint firstItem="Cx5-pI-HGE" firstAttribute="top" secondItem="2HP-pj-vYZ" secondAttribute="bottom" constant="30" id="T6u-D8-0le"/>
                             <constraint firstItem="2HP-pj-vYZ" firstAttribute="top" secondItem="NvL-of-M3t" secondAttribute="bottom" constant="30" id="UG0-a1-htf"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="lA1-Ww-EgA" secondAttribute="trailing" constant="50" id="Wcm-E5-DCw"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="lCA-LT-fq3" secondAttribute="trailing" constant="50" id="Zav-gM-3tF"/>
+                            <constraint firstItem="NvL-of-M3t" firstAttribute="top" secondItem="7aC-iI-7TU" secondAttribute="bottom" constant="27" id="anY-c4-7vP"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="2HP-pj-vYZ" secondAttribute="trailing" constant="50" id="cOB-UY-wUG"/>
-                            <constraint firstItem="lA1-Ww-EgA" firstAttribute="top" secondItem="lCA-LT-fq3" secondAttribute="bottom" constant="135" id="cX8-eL-Pbi"/>
                             <constraint firstItem="lCA-LT-fq3" firstAttribute="top" secondItem="Esh-GP-woM" secondAttribute="bottom" constant="30" id="ceV-qm-VzN"/>
                             <constraint firstItem="Esh-GP-woM" firstAttribute="top" secondItem="Cx5-pI-HGE" secondAttribute="bottom" constant="30" id="hJ6-ej-810"/>
                             <constraint firstItem="Esh-GP-woM" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="hke-BP-b55"/>
-                            <constraint firstItem="NvL-of-M3t" firstAttribute="top" secondItem="TrX-nv-hS7" secondAttribute="bottom" constant="30" id="jl2-3X-Idg"/>
+                            <constraint firstItem="TrX-nv-hS7" firstAttribute="top" secondItem="0CM-DS-lec" secondAttribute="bottom" constant="37" id="lu2-LF-xGv"/>
+                            <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="0CM-DS-lec" secondAttribute="trailing" constant="50" id="qno-1v-NAP"/>
                             <constraint firstItem="TrX-nv-hS7" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="r1v-Gk-Vq7"/>
+                            <constraint firstItem="lA1-Ww-EgA" firstAttribute="top" secondItem="lCA-LT-fq3" secondAttribute="bottom" constant="60" id="sSh-nr-Fxv"/>
                             <constraint firstItem="0b7-0Z-j5w" firstAttribute="trailing" secondItem="Cx5-pI-HGE" secondAttribute="trailing" constant="50" id="wfV-vd-ZpD"/>
+                            <constraint firstItem="7aC-iI-7TU" firstAttribute="leading" secondItem="0b7-0Z-j5w" secondAttribute="leading" constant="50" id="zq8-RX-1AT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pfi-J6-H7u"/>
                     <connections>
+                        <outlet property="ImagePlanet" destination="0CM-DS-lec" id="vdg-fW-gID"/>
+                        <outlet property="TFCategory" destination="7aC-iI-7TU" id="8KR-mZ-nCm"/>
+                        <outlet property="TFDensity" destination="NvL-of-M3t" id="tgG-mk-x32"/>
+                        <outlet property="TFDistance" destination="Cx5-pI-HGE" id="Pr3-nH-mEq"/>
+                        <outlet property="TFMass" destination="2HP-pj-vYZ" id="PN0-Mc-A4N"/>
+                        <outlet property="TFName" destination="TrX-nv-hS7" id="eRr-5n-VKQ"/>
+                        <outlet property="TFRadius" destination="Esh-GP-woM" id="b3Y-Yd-QMP"/>
+                        <outlet property="TFRotation" destination="lCA-LT-fq3" id="4r2-v0-uzo"/>
                         <outlet property="lblMass" destination="2HP-pj-vYZ" id="2or-1j-4Dr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxf-Lk-qfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="-123"/>
+            <point key="canvasLocation" x="1082.608695652174" y="-123.21428571428571"/>
         </scene>
         <!--View Controller detail Planet-->
         <scene sceneID="9tS-ac-bSg">
@@ -223,17 +252,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyi-RS-tWX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyi-RS-tWX">
                                 <rect key="frame" x="50" y="732" width="314" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="314" id="num-Jw-9ou"/>
                                     <constraint firstAttribute="height" constant="51" id="yty-RT-L7L"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="DELETE PLANET">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <buttonConfiguration key="configuration" style="filled" title="DELETE PLANET">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnDelete:" destination="npK-Y0-t0Q" eventType="touchUpInside" id="x8g-hw-FRg"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L8z-ph-Wlz">
                                 <rect key="frame" x="20" y="88" width="374" height="200"/>
