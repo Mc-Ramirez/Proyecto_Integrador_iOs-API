@@ -8,15 +8,16 @@
 import Foundation
 
 struct Planetas : Codable{
+    var id : String
     var planetName : String
-    var planetUrlImage : URL
+    var planetUrlImage : String
     var planetDistanceMio : String
     var planetEquatorialRadius: String
     var planetRotationPeriod: String
     var planetMassKg : String
     var planetDensity : String
     var category : String
-   
+
 }
 
 
