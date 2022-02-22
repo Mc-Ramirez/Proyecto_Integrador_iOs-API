@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLB-cE-njn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLB-cE-njn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -342,7 +342,7 @@
                         <outlet property="planetDistance" destination="Jta-iv-cjh" id="93T-98-BJx"/>
                         <outlet property="planetEquatorialRadius" destination="VRF-VR-kQy" id="Gne-7n-axf"/>
                         <outlet property="planetImg" destination="L8z-ph-Wlz" id="PI1-0v-Wxq"/>
-                        <outlet property="planetMass" destination="LAI-wI-82X" id="4Qh-rA-Gf8"/>
+                        <outlet property="planetMass" destination="LAI-wI-82X" id="tuq-Yv-xdN"/>
                         <outlet property="planetName" destination="jTH-dn-qSJ" id="xS1-Gx-6Hu"/>
                         <outlet property="planetRotationPeriod" destination="Tl2-hD-WhU" id="95o-x8-F66"/>
                     </connections>
@@ -424,32 +424,27 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Density" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGQ-JL-q0m">
-                                <rect key="frame" x="50" y="398" width="314" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mass" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aA4-8a-w6C">
-                                <rect key="frame" x="50" y="462" width="314" height="34"/>
+                                <rect key="frame" x="50" y="407" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance To Sun" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oX9-5s-XG7">
-                                <rect key="frame" x="50" y="526" width="314" height="33"/>
+                                <rect key="frame" x="50" y="495" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rotation Period" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVW-K4-LwP">
-                                <rect key="frame" x="50" y="653" width="314" height="34"/>
+                                <rect key="frame" x="50" y="583" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJU-dE-e4s">
-                                <rect key="frame" x="50" y="270" width="314" height="34"/>
+                                <rect key="frame" x="50" y="319" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category:   Planet | Star | Moon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ua5-uW-AOP">
-                                <rect key="frame" x="50" y="334" width="314" height="34"/>
+                                <rect key="frame" x="50" y="363" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -461,7 +456,17 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Equatorial Radius" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URp-IY-tA6">
-                                <rect key="frame" x="50" y="589" width="314" height="34"/>
+                                <rect key="frame" x="50" y="539" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Url Image" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-o6-gBK">
+                                <rect key="frame" x="50" y="275" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mass" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aA4-8a-w6C">
+                                <rect key="frame" x="50" y="451" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -472,31 +477,33 @@
                             <constraint firstItem="nw2-5h-ERx" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="1FL-a6-Wao"/>
                             <constraint firstItem="BJU-dE-e4s" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="2oc-bZ-T7Y"/>
                             <constraint firstItem="oX9-5s-XG7" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="32E-1n-tYo"/>
+                            <constraint firstItem="BJU-dE-e4s" firstAttribute="top" secondItem="1JA-o6-gBK" secondAttribute="bottom" constant="10" id="5j7-K7-6l2"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="vZC-e6-Hmd" secondAttribute="trailing" constant="50" id="5uA-CC-vVz"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="NGQ-JL-q0m" secondAttribute="trailing" constant="50" id="7vu-OC-cFa"/>
                             <constraint firstItem="URp-IY-tA6" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="9hV-mG-4jK"/>
-                            <constraint firstItem="oX9-5s-XG7" firstAttribute="top" secondItem="aA4-8a-w6C" secondAttribute="bottom" constant="30" id="Cms-ZZ-uDL"/>
+                            <constraint firstItem="NGQ-JL-q0m" firstAttribute="top" secondItem="Ua5-uW-AOP" secondAttribute="bottom" constant="10" id="Cll-Ek-ZIu"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="nw2-5h-ERx" secondAttribute="trailing" constant="50" id="DTz-NS-LFT"/>
+                            <constraint firstItem="1JA-o6-gBK" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="E00-g3-Asf"/>
+                            <constraint firstItem="cVW-K4-LwP" firstAttribute="top" secondItem="URp-IY-tA6" secondAttribute="bottom" constant="10" id="G93-Jx-oS2"/>
+                            <constraint firstItem="Ua5-uW-AOP" firstAttribute="top" secondItem="BJU-dE-e4s" secondAttribute="bottom" constant="10" id="Keh-uB-sAK"/>
                             <constraint firstItem="Ua5-uW-AOP" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="Khk-e3-Axz"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="cVW-K4-LwP" secondAttribute="trailing" constant="50" id="LNG-xY-lfg"/>
                             <constraint firstItem="cVW-K4-LwP" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="Mfh-6E-Ud0"/>
-                            <constraint firstItem="Ua5-uW-AOP" firstAttribute="top" secondItem="BJU-dE-e4s" secondAttribute="bottom" constant="30" id="Ngz-iv-GnZ"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="oX9-5s-XG7" secondAttribute="trailing" constant="50" id="P25-bN-qnk"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="BJU-dE-e4s" secondAttribute="trailing" constant="50" id="Pq4-4c-nq4"/>
                             <constraint firstItem="NGQ-JL-q0m" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="QZj-yx-Ctc"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="Ua5-uW-AOP" secondAttribute="trailing" constant="50" id="QfD-nt-yjy"/>
-                            <constraint firstItem="vZC-e6-Hmd" firstAttribute="top" secondItem="cVW-K4-LwP" secondAttribute="bottom" constant="45" id="Slg-IB-Rg0"/>
-                            <constraint firstItem="BJU-dE-e4s" firstAttribute="top" secondItem="nw2-5h-ERx" secondAttribute="bottom" constant="25" id="UDy-As-EEY"/>
                             <constraint firstItem="nw2-5h-ERx" firstAttribute="top" secondItem="G2s-vC-eS6" secondAttribute="top" constant="90" id="UMv-77-lPY"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="bottom" secondItem="vZC-e6-Hmd" secondAttribute="bottom" constant="30" id="Whl-DX-wPS"/>
                             <constraint firstItem="vZC-e6-Hmd" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="Xry-Ld-VIX"/>
-                            <constraint firstItem="NGQ-JL-q0m" firstAttribute="top" secondItem="Ua5-uW-AOP" secondAttribute="bottom" constant="30" id="Zlv-Dc-ZQG"/>
                             <constraint firstItem="aA4-8a-w6C" firstAttribute="leading" secondItem="lg8-UE-WvT" secondAttribute="leading" constant="50" id="aXv-DE-8Q8"/>
-                            <constraint firstItem="URp-IY-tA6" firstAttribute="top" secondItem="oX9-5s-XG7" secondAttribute="bottom" constant="30" id="i4a-t3-9Wf"/>
+                            <constraint firstItem="aA4-8a-w6C" firstAttribute="top" secondItem="NGQ-JL-q0m" secondAttribute="bottom" constant="10" id="cf6-4e-NMe"/>
+                            <constraint firstItem="1JA-o6-gBK" firstAttribute="top" secondItem="nw2-5h-ERx" secondAttribute="bottom" constant="30" id="dBX-yt-6Ik"/>
+                            <constraint firstItem="URp-IY-tA6" firstAttribute="top" secondItem="oX9-5s-XG7" secondAttribute="bottom" constant="10" id="hqZ-cz-fFA"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="aA4-8a-w6C" secondAttribute="trailing" constant="50" id="kaG-N9-EIu"/>
+                            <constraint firstItem="oX9-5s-XG7" firstAttribute="top" secondItem="aA4-8a-w6C" secondAttribute="bottom" constant="10" id="lNb-1E-CXb"/>
                             <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="URp-IY-tA6" secondAttribute="trailing" constant="50" id="n4x-Ek-QbM"/>
-                            <constraint firstItem="aA4-8a-w6C" firstAttribute="top" secondItem="NGQ-JL-q0m" secondAttribute="bottom" constant="30" id="o5H-Zf-yUo"/>
-                            <constraint firstItem="cVW-K4-LwP" firstAttribute="top" secondItem="URp-IY-tA6" secondAttribute="bottom" constant="30" id="odZ-Mo-JtV"/>
+                            <constraint firstItem="lg8-UE-WvT" firstAttribute="trailing" secondItem="1JA-o6-gBK" secondAttribute="trailing" constant="50" id="wYq-m3-mG6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zgy-dp-ru1"/>
@@ -508,11 +515,12 @@
                         <outlet property="planetName" destination="BJU-dE-e4s" id="CER-Tr-NUg"/>
                         <outlet property="planetRadius" destination="URp-IY-tA6" id="g4F-it-Itx"/>
                         <outlet property="planetRotation" destination="cVW-K4-LwP" id="49R-RD-smC"/>
+                        <outlet property="planetUrlImage" destination="1JA-o6-gBK" id="aT9-10-5lc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4m-hV-44C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="569"/>
+            <point key="canvasLocation" x="1882.608695652174" y="568.52678571428567"/>
         </scene>
     </scenes>
     <resources>

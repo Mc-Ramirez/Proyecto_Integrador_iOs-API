@@ -21,22 +21,7 @@ class TableViewController_PlanetList: UITableViewController {
         tableView.reloadData()
     }
     
-    func loadDataFromRemoteUrl() -> URL{
-        guard let url = URL(string: "https://iplanet-api.herokuapp.com/getallplanets") else{ fatalError("ERROR")}
-        return url
-    }
-    
-    func decodeJson(url : URL){
-        do{
-            let decoder = JSONDecoder()
-            let datosPlanetas = try Data(contentsOf: url)
-            
-            self.decodePlanet = try decoder.decode([Planetas].self, from: datosPlanetas)
-        } catch {
-            print("Error")
-        }
-    }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -62,6 +47,22 @@ class TableViewController_PlanetList: UITableViewController {
             vistaDetalle.planetContent = planetaSeleccionado
         }
     }
+    
+    func loadDataFromRemoteUrl() -> URL{
+        guard let url = URL(string: "https://iplanet-api.herokuapp.com/getallplanets") else{ fatalError("ERROR")}
+        return url
+    }
+    
+    func decodeJson(url : URL){
+        do{
+            let decoder = JSONDecoder()
+            let datosPlanetas = try Data(contentsOf: url)
+            self.decodePlanet = try decoder.decode([Planetas].self, from: datosPlanetas)
+        } catch {
+            print("Error")
+        }
+    }
+   
     
     //Pestaña editar personalizada
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

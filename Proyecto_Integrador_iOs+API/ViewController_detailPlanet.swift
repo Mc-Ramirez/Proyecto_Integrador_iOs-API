@@ -1,14 +1,10 @@
-//
 //  ViewController_detailPlanet.swift
 //  Proyecto_Integrador_iOs+API
-//
 //  Created by Sergio Rivera Anguita on 16/2/22.
-//
 
 import UIKit
 
 class ViewController_detailPlanet: UIViewController {
-    
     @IBOutlet weak var planetImg: UIImageView!
     @IBOutlet weak var planetName: UILabel!
     @IBOutlet weak var planetCathegory: UILabel!
@@ -23,27 +19,25 @@ class ViewController_detailPlanet: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        /*let url = URL(string: "\(planetContent?.planetUrlImage)")
+       let url = URL(string: "\(planetContent?.planetUrlImage ?? "")")
         do {
             let data = try Data(contentsOf: url!)
             let image = UIImage(data: data)
+            planetImg.image = image
         }catch let error as NSError {
             print(error)
-        }*/
-
+        }
         
-        print("la id del planeta \(String(describing: planetContent?.id))")
-        //planetImg.image = planetContent?.planetUrlImage
+        //planetUrlImage.text = planetContent?.planetUrlImage
         planetName.text = planetContent?.planetName
         planetCathegory.text = planetContent?.category
         planetDensity.text = planetContent?.planetDensity
+        print(planetContent?.planetMassKg)
         planetMass.text = planetContent?.planetMassKg
         planetDistance.text = planetContent?.planetDistanceMio
         planetEquatorialRadius.text = planetContent?.planetEquatorialRadius
         planetRotationPeriod.text = planetContent?.planetRotationPeriod
         idplaneta = planetContent?.id ?? ""
-        
     }
     
     
@@ -56,15 +50,12 @@ class ViewController_detailPlanet: UIViewController {
         
         
         let jsonData = try? JSONSerialization.data(withJSONObject: planetJson)
-        
         let url = URL(string: "https://iplanet-api.herokuapp.com/deletebyid/\(idplaneta)")!
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         // Insertamos los datos json en la peticion
-        
         request.httpBody = jsonData
-        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No hay datos")
@@ -79,14 +70,10 @@ class ViewController_detailPlanet: UIViewController {
         task.resume()
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "IrEditar"{
             let viewEdit = segue.destination as! EditPlanet_ViewController
             viewEdit.idplaneta = planetContent?.id ?? ""
-            
         }
-        
     }
-    
 }
