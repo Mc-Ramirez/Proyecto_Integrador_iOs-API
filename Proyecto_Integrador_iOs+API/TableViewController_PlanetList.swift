@@ -8,7 +8,7 @@ class TableViewController_PlanetList: UITableViewController {
     @IBOutlet weak var titulo: UINavigationItem!
     @IBOutlet var miTabla: UITableView!
     var decodePlanet : [Planetas] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let url =  loadDataFromRemoteUrl()
@@ -20,7 +20,7 @@ class TableViewController_PlanetList: UITableViewController {
         decodeJson(url: url)
         tableView.reloadData()
     }
-
+    
     func loadDataFromRemoteUrl() -> URL{
         guard let url = URL(string: "https://iplanet-api.herokuapp.com/getallplanets") else{ fatalError("ERROR")}
         return url
@@ -40,14 +40,14 @@ class TableViewController_PlanetList: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return decodePlanet.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+        
         // Configurar la celda
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = decodePlanet[indexPath.row].planetName
@@ -61,5 +61,30 @@ class TableViewController_PlanetList: UITableViewController {
             let vistaDetalle = segue.destination as! ViewController_detailPlanet
             vistaDetalle.planetContent = planetaSeleccionado
         }
+    }
+    
+    //Pestaña editar personalizada
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let opBorrar = UIContextualAction(style: .normal, title: "Borrar") { _,_,_ in
+            if indexPath.section == 0{
+                
+            }else{
+                
+            }
+            self.miTabla.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        opBorrar.image = UIImage(systemName: "trash")
+        opBorrar.backgroundColor = UIColor.red
+        
+        let opEditar = UIContextualAction(style: .normal, title: "Editar") { _,_,_ in
+            print("Has pulsado editar")
+        }
+        
+        opEditar.backgroundColor = UIColor.blue
+        opEditar.image = UIImage(systemName: "pencil")
+        
+        let configurarBotones = UISwipeActionsConfiguration(actions: [opBorrar, opEditar])
+        return configurarBotones
     }
 }

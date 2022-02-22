@@ -17,7 +17,7 @@ struct Planetas : Codable{
     var planetMassKg : String
     var planetDensity : String
     var category : String
-   
+
 }
 
 
