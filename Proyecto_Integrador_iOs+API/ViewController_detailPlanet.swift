@@ -22,6 +22,17 @@ class ViewController_detailPlanet: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        /*let url = URL(string: "\(planetContent?.planetUrlImage)")
+        do {
+            let data = try Data(contentsOf: url!)
+            let image = UIImage(data: data)
+        }catch let error as NSError {
+            print(error)
+        }*/
+
+        
         print("la id del planeta \(String(describing: planetContent?.id))")
         //planetImg.image = planetContent?.planetUrlImage
         planetName.text = planetContent?.planetName
@@ -35,6 +46,7 @@ class ViewController_detailPlanet: UIViewController {
         
     }
     
+    
     @IBAction func btnDelete(_ sender: Any) {
         // Preparamos los datos en formato json
         print("clicas aqui")
@@ -42,14 +54,15 @@ class ViewController_detailPlanet: UIViewController {
             "id" : "\(planetContent?.id)"
         ]
         
+        
         let jsonData = try? JSONSerialization.data(withJSONObject: planetJson)
+        
         let url = URL(string: "https://iplanet-api.herokuapp.com/deletebyid/\(idplaneta)")!
-        print(url)
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
         // Insertamos los datos json en la peticion
+        
         request.httpBody = jsonData
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -66,36 +79,14 @@ class ViewController_detailPlanet: UIViewController {
         task.resume()
     }
     
-    @IBAction func btnDelete(_ sender: Any) {
-        // Preparamos los datos en formato json
-        print("clicas aqui")
-        let planetJson: [String:String] = [
-            "id" : "\(planetContent?.id)"
-        ]
-        
-        
-        let jsonData = try? JSONSerialization.data(withJSONObject: planetJson)
-        
-        let url = URL(string: "https://iplanet-api.herokuapp.com/deletebyid/")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "DELETE"
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        // Insertamos los datos json en la peticion
-        
-        request.httpBody = jsonData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-        guard let data = data, error == nil else {
-        print(error?.localizedDescription ?? "No hay datos")
-        return
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "IrEditar"{
+            let viewEdit = segue.destination as! EditPlanet_ViewController
+            viewEdit.idplaneta = planetContent?.id ?? ""
+            
         }
-            print ("RESPUESTA: \(String(describing: response))")
-        let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-        if let responseJSON = responseJSON as? [String: Any] {
-        print(responseJSON)
-        }
-        }
-        task.resume()
+        
     }
     
 }
