@@ -76,4 +76,35 @@ class ViewController_detailPlanet: UIViewController {
             viewEdit.idplaneta = planetContent?.id ?? ""
         }
     }
+    
+    //Constraint
+    @IBOutlet weak var img_hd: NSLayoutConstraint!
+    @IBOutlet weak var img_wd: NSLayoutConstraint!
+    @IBOutlet weak var namePlanetTop: NSLayoutConstraint!
+    @IBOutlet weak var btnDeletePL: NSLayoutConstraint!
+    @IBOutlet weak var imgPL: NSLayoutConstraint!
+    @IBOutlet weak var namePlanetPL: NSLayoutConstraint!
+    @IBOutlet weak var cathegoryTop: NSLayoutConstraint!
+    
+    //Autolayout
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let orientacion = UIDevice.current.orientation
+        if (orientacion.isLandscape) {
+            //img_hd.constant = 29
+            //img_wd.constant = 59
+            imgPL.constant = 305
+            namePlanetTop.constant = 3
+            btnDeletePL.constant = 250
+            namePlanetPL.constant = 265
+            cathegoryTop.constant = -100
+        }else{
+            img_hd.constant = 117
+            img_wd.constant = 236
+            imgPL.constant = 89
+            namePlanetTop.constant = 15
+            btnDeletePL.constant = 30
+            namePlanetPL.constant = 50
+            cathegoryTop.constant = 15
+        }
+    }
 }

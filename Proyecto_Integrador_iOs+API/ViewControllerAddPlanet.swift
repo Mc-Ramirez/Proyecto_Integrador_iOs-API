@@ -61,4 +61,79 @@ class ViewControllerAddPlanet: UIViewController {
         }
         task.resume()
     }
+    
+    //Constrain
+    @IBOutlet weak var urlTop: NSLayoutConstraint!
+    @IBOutlet weak var urlPL: NSLayoutConstraint!
+    @IBOutlet weak var namePL: NSLayoutConstraint!
+    @IBOutlet weak var categoryPL: NSLayoutConstraint!
+    @IBOutlet weak var densityPL: NSLayoutConstraint!
+    @IBOutlet weak var url_wd: NSLayoutConstraint!
+    @IBOutlet weak var name_wd: NSLayoutConstraint!
+    @IBOutlet weak var category_wd: NSLayoutConstraint!
+    @IBOutlet weak var density_wd: NSLayoutConstraint!
+    @IBOutlet weak var urlPR: NSLayoutConstraint!
+    @IBOutlet weak var categoryPR: NSLayoutConstraint!
+    @IBOutlet weak var densityPR: NSLayoutConstraint!
+    @IBOutlet weak var namePR: NSLayoutConstraint!
+    @IBOutlet weak var massTop: NSLayoutConstraint!
+    @IBOutlet weak var massPR: NSLayoutConstraint!
+    @IBOutlet weak var massPL: NSLayoutConstraint!
+    @IBOutlet weak var distancePR: NSLayoutConstraint!
+    @IBOutlet weak var distancePL: NSLayoutConstraint!
+    @IBOutlet weak var radiusPR: NSLayoutConstraint!
+    @IBOutlet weak var radiusPL: NSLayoutConstraint!
+    @IBOutlet weak var rotationPR: NSLayoutConstraint!
+    @IBOutlet weak var rotationPL: NSLayoutConstraint!
+    @IBOutlet weak var mass_wd: NSLayoutConstraint!
+    @IBOutlet weak var distance_wd: NSLayoutConstraint!
+    @IBOutlet weak var radius_wd: NSLayoutConstraint!
+    @IBOutlet weak var rotation_wd: NSLayoutConstraint!
+    
+    //Autolayout
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let orientacion = UIDevice.current.orientation
+        if (orientacion.isLandscape) {
+            urlTop.constant = 3
+            urlPL.constant = 50
+            namePL.constant = 50
+            categoryPL.constant = 50
+            densityPL.constant = 50
+            massPR.constant = 50
+            distancePR.constant = 50
+            radiusPR.constant = 50
+            rotationPR.constant = 50
+            url_wd.constant = 180
+            name_wd.constant = 180
+            category_wd.constant = 180
+            density_wd.constant = 180
+            mass_wd.constant = 180
+            distance_wd.constant = 180
+            radius_wd.constant = 180
+            rotation_wd.constant = 180
+            massTop.constant = -165
+            urlPR.isActive = false
+            namePR.isActive = false
+            categoryPR.isActive = false
+            densityPR.isActive = false
+            massPL.isActive = false
+            distancePL.isActive = false
+            radiusPL.isActive = false
+            rotationPL.isActive = false
+        }else{
+            urlTop.constant = 15
+            urlPL.constant = 15
+            namePL.constant = 15
+            categoryPL.constant = 15
+            densityPL.constant = 15
+            url_wd.constant = 314
+            name_wd.constant = 314
+            category_wd.constant = 314
+            density_wd.constant = 314
+            urlPR.isActive = true
+            namePR.isActive = true
+            categoryPR.isActive = true
+            densityPR.isActive = true
+        }
+    }
 }
