@@ -115,17 +115,17 @@
 			children = (
 				CBB7171B27B4628100A8DC4B /* AppDelegate.swift */,
 				CBB7171D27B4628100A8DC4B /* SceneDelegate.swift */,
-				CD82297C27BD33C8009ED8A9 /* ViewController_detailPlanet.swift */,
-				CD82297A27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift */,
 				CBB7174D27B6933E00A8DC4B /* ViewControllerAddPlanet.swift */,
 				CD83C01227C50C7400DAD325 /* EditPlanet_ViewController.swift */,
-				CBCC961527BD759B00030753 /* CollectionViewCellPlanets.swift */,
-				CBFEE32627BE760500CC5D4B /* ViewModel.swift */,
+				CD82297C27BD33C8009ED8A9 /* ViewController_detailPlanet.swift */,
+				CD82297A27BD2DF6009ED8A9 /* TableViewController_PlanetList.swift */,
 				CD82297827BD2A60009ED8A9 /* Planetas.swift */,
 				CBB7172127B4628100A8DC4B /* Main.storyboard */,
 				CBB7172427B4628200A8DC4B /* Assets.xcassets */,
 				CBB7172627B4628200A8DC4B /* LaunchScreen.storyboard */,
 				CBB7172927B4628200A8DC4B /* Info.plist */,
+				CBCC961527BD759B00030753 /* CollectionViewCellPlanets.swift */,
+				CBFEE32627BE760500CC5D4B /* ViewModel.swift */,
 				D391A77627C116AA000CFAD7 /* PlanetBody.swift */,
 			);
 			path = "Proyecto_Integrador_iOs+API";
